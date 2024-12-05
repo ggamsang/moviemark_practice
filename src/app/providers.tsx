@@ -1,7 +1,10 @@
 import { RecoilRoot } from 'recoil';
 import Recoilize from 'recoilize';
 
-function Providers({ children }) {
+interface ProvidersProps {
+  children: any
+}
+function Providers({ children }: ProvidersProps) {
   return (
     <RecoilRoot>
       {process.env.NODE_ENV === 'development' && <Recoilize />}
